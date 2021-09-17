@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.side-left{
+    border: 1px solid blue;
+}
+
+.side-right{
+    border: 1px solid red;
+}
+
+.side-left, .side-right {
+    width: 100%;
+    /*Altezza provvisoria*/
+    height: 100vh;
+}
