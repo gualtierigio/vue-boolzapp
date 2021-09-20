@@ -173,7 +173,26 @@ section.messages{
     background-size: contain;
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
+    padding: 50px 40px 0 50px;
 } 
+
+.message{
+    width: 40%;
+    height: 60px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.sent{
+    background-color: beige;
+}
+
+.recived{
+    background-color: rgb(10, 233, 10);
+    right: 50px;
+    position: relative;
+    left: 55%;
+}
 
 /*Contacts section*/
 
@@ -181,7 +200,6 @@ section.messages{
     height: calc(100% - 170px);
     width: 100%;
     overflow-y: scroll;
-    position: relative;
 }
 
 .contact-container{
@@ -189,6 +207,7 @@ section.messages{
     height: 70px;
     border-bottom: 1px solid rgb(139, 139, 139);
     padding: 10px;
+    position: relative;
 }
 
 .img__contact-container{
