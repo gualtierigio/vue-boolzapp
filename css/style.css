@@ -181,10 +181,30 @@ section.messages{
     height: calc(100% - 170px);
     width: 100%;
     overflow-y: scroll;
+    position: relative;
 }
 
 .contact-container{
     width: 100%;
-    height: 80px;
+    height: 70px;
     border-bottom: 1px solid rgb(139, 139, 139);
+    padding: 10px;
+}
+
+.img__contact-container{
+    width: 50px;
+    height: 50px;
+}
+
+.img__contact-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    vertical-align: revert;
+}
+
+.last-connection{
+    position: absolute;
+    top: 0;
+    right: 0;
 }

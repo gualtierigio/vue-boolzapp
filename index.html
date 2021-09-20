@@ -56,7 +56,17 @@
                     </section>
                     <section class="my_contacts">
                         <div v-for="(contact, index) in contacts" class="contact-container">
-                            <img :src="'img/avatar' + contacts[index].avatar + '.jpg'" alt="">
+                            <div class="img__contact-container inlineB">
+                                <img :src="'img/avatar' + contacts[index].avatar + '.jpg'" alt="avatar img">
+                            </div>
+                            <div class="line-height inlineB">
+                                <p class="inlineB">{{contacts[index].name}}<br>
+                                    <span class="small-gray-text">{{contacts[index].messages[]}}</span>
+                                </p>
+                            </div>
+                            <div class="last-connection">
+                                <p>ultimo accesso</p>
+                            </div>
                         </div>
                     </section>
                 </aside>
