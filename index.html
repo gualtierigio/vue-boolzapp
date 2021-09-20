@@ -55,7 +55,7 @@
                         </div>
                     </section>
                     <section class="my_contacts">
-                        <div v-for="(contact, index) in contacts" class="contact-container">
+                        <div @click="selectContact(index)" v-for="(contact, index) in contacts" class="contact-container">
                             <div class="img__contact-container inlineB">
                                 <img :src="'img/avatar' + contacts[index].avatar + '.jpg'" alt="avatar img">
                             </div>
@@ -75,13 +75,13 @@
             <div class="col-7">
                 <aside class="side-right">
                     <section class="header-user d-flex">
-                        <div class="user-profile d-flex justify-content-start">
+                        <div class="user-profile d-flex justify-content-start" >
                             <div class="profile-wrapper">
-                                <img src="img/avatar_1.jpg" alt="avatar img">
+                                <img :src="'img/avatar' + contacts[selectedContact].avatar + '.jpg'" alt="avatar img">
                             </div>
                             <div class="line-height">
-                                <p class="inlineB">Nome Utente<br>
-                                    <span class="small-gray-text">*ultimo accesso eseguito*</span>
+                                <p class="inlineB">{{contacts[selectedContact].name}}<br>
+                                    <span class="small-gray-text">{{contacts[selectedContact].messages[0].date}}</span>
                                 </p>
                             </div>
                         </div>
@@ -92,9 +92,9 @@
                         </div>
                     </section>
                     <section class="messages">
-                        <div v-for="(element, index) in contacts[0].messages" class="message recived d-flex">
+                        <div v-for="(element, index) in contacts[selectedContact].messages" class="message recived d-flex">
                             <p class="text-message align-self-center">{{element.text}}</p>
-                            <p class="small-gray-text data-message">{{contacts[index].messages[0].date}}</p>
+                            <p class="small-gray-text data-message align-self-end">{{element.date}}</p>
                         </div>
                     </section>
                 </aside>

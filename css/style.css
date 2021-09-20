@@ -58,7 +58,7 @@ i:hover{
 }
 
 .small-gray-text{
-    font-size: 13px;
+    font-size: 11px;
     color: rgb(156, 156, 156);
 }
 
@@ -178,17 +178,22 @@ section.messages{
 
 .message{
     width: 40%;
-    height: 60px;
+    min-height: 60px;
     border-radius: 10px;
     margin: 10px;
-    padding-left: 15px;
+    padding: 15px 7px;
     position: relative;
+}
+
+.text-message{
+    margin-bottom: 0;
 }
 
 .data-message{
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 2px;
+    right: 2px;
+    margin-bottom: 0;
 }
 
 .sent{
@@ -215,6 +220,10 @@ section.messages{
     border-bottom: 1px solid rgb(139, 139, 139);
     padding: 10px;
     position: relative;
+}
+
+.contact-container:hover{
+    background-color: rgba(180, 180, 180, 0.616);
 }
 
 .img__contact-container{

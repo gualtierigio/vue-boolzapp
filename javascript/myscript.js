@@ -87,17 +87,24 @@ var app = new Vue({
                 ],
             },
         ],
+
+        selectedContact : 0,
     },
-    
+
     methods: {
 
-        /*
+        selectContact(index) {
+            this.selectedContact = index;
+            console.log(index);
+        },
 
-        getLastMessage(array) function{
-            
-        }
-
-        */
+        receivedOrSent(){
+            if (this.selectedContact.messages.status == 'received'){
+                /*stampa come ricevuto*/
+            }else if(this.selectedContact.messages.status == 'sent'){
+                /*stampa come ricevuto*/
+            }
+        },
     },
 
     mounted(){
