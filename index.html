@@ -55,7 +55,9 @@
                         </div>
                     </section>
                     <section class="my_contacts">
-                        <div></div>
+                        <div v-for="(contact, index) in contacts" class="contact-container">
+                            <img :src="'img/avatar' + contacts[index].avatar + '.jpg'" alt="">
+                        </div>
                     </section>
                 </aside>
             </div>
