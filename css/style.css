@@ -177,3 +177,11 @@ section.messages{
     background-image: url(../img/mine.jpg);
     overflow-y: scroll;
 } 
+
+/*Contacts section*/
+
+.my_contacts{
+    height: calc(100% - 170px);
+    width: 100%;
+    overflow-y: scroll;
+}
