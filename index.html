@@ -61,11 +61,11 @@
                             </div>
                             <div class="line-height inlineB">
                                 <p class="inlineB">{{contacts[index].name}}<br>
-                                    <span class="small-gray-text">ultimo accesso</span>
+                                    <span class="small-gray-text">{{contacts[index].messages[0].text}}</span>
                                 </p>
                             </div>
                             <div class="last-connection">
-                                <p>{{contacts[index].messages[0].date}}</p>
+                                <p class="small-gray-text">{{contacts[index].messages[0].date}}</p>
                             </div>
                         </div>
                     </section>
@@ -92,8 +92,10 @@
                         </div>
                     </section>
                     <section class="messages">
-                        <div v-for="(message, index) in contacts.messagges" class="message recived">{{contacts.messages[index].text}}</div>
-                        <div class="message sent"></div>
+                        <div v-for="(element, index) in contacts[0].messages" class="message recived d-flex">
+                            <p class="text-message align-self-center">{{element.text}}</p>
+                            <p class="small-gray-text data-message">{{contacts[index].messages[0].date}}</p>
+                        </div>
                     </section>
                 </aside>
             </div>

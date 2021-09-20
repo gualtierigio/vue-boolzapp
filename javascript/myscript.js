@@ -87,8 +87,24 @@ var app = new Vue({
                 ],
             },
         ],
-        
+    },
+    
+    methods: {
+
+        /*
+
+        getLastMessage(array) function{
+            
+        }
+
+        */
+    },
+
+    mounted(){
+        console.log(this.contacts.messages);
     }
-      });
+});
    
+
+
     
