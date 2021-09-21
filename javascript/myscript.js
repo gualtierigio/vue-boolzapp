@@ -92,12 +92,6 @@ var app = new Vue({
 
         newMessageField: '',
 
-        newMessage : 
-            {
-                date: '21/10/2021',
-                text: '',
-                status: 'sent'
-            },
     },
 
     methods: {
@@ -108,13 +102,36 @@ var app = new Vue({
 
         addNewMessage() {
 
-            this.newMessage.text = this.newMessageField;
+            let newMessage = 
+            {
+                date: '21/10/2021',
+                text: this.newMessageField,
+                status: 'sent'
+            };
 
-            if (this.newMessage.text.length > 0){
-                this.contacts[this.selectedContact].messages.push(this.newMessage);
+            if (this.newMessageField.length > 0){
+                this.contacts[this.selectedContact].messages.push(newMessage);
             };
 
             this.newMessageField = '';
+
+            this.answer()
+        },
+
+        answer() { 
+
+            setTimeout(() => {
+
+                let newMessage = 
+            {
+                date: '21/10/2021',
+                text: 'Ok',
+                status: 'received'
+            };
+
+            this.contacts[this.selectedContact].messages.push(newMessage);
+
+            }, 1000);
         },
     },
 });
