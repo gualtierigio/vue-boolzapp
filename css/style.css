@@ -196,11 +196,11 @@ section.messages{
     margin-bottom: 0;
 }
 
-.sent{
+.received{
     background-color: beige;
 }
 
-.recived{
+.sent{
     background-color: rgb(10, 233, 10);
     right: 50px;
     left: 55%;

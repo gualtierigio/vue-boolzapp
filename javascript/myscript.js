@@ -95,7 +95,6 @@ var app = new Vue({
 
         selectContact(index) {
             this.selectedContact = index;
-            console.log(index);
         },
 
         receivedOrSent(){

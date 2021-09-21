@@ -92,7 +92,7 @@
                         </div>
                     </section>
                     <section class="messages">
-                        <div v-for="(element, index) in contacts[selectedContact].messages" class="message recived d-flex">
+                        <div v-for="(element, index) in contacts[selectedContact].messages" class="message d-flex" :class="element.status">
                             <p class="text-message align-self-center">{{element.text}}</p>
                             <p class="small-gray-text data-message align-self-end">{{element.date}}</p>
                         </div>
