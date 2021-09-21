@@ -51,11 +51,12 @@
                                 <i class="fas fa-search"></i>
                             </button>
                         <div class="write-research fr">
-                            <input type="text" placeholder="cerca o inizia una nuova chat">
+                            <input type="text" v-model="newFilteredContact" placeholder="cerca o inizia una nuova chat">
                         </div>
                     </section>
                     <section class="my_contacts">
-                        <div @click="selectContact(index)" v-for="(contact, index) in contacts" class="contact-container">
+                        <div @click="selectContact(index)" v-for="(contact, index) in contacts" 
+                        class="contact-container" v-if="filterContact(contact)">
                             <div class="img__contact-container inlineB">
                                 <img :src="'img/avatar' + contacts[index].avatar + '.jpg'" alt="avatar img">
                             </div>

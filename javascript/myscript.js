@@ -92,6 +92,8 @@ var app = new Vue({
 
         newMessageField: '',
 
+        newFilteredContact: '',
+
     },
 
     methods: {
@@ -132,6 +134,14 @@ var app = new Vue({
             this.contacts[this.selectedContact].messages.push(newMessage);
 
             }, 1000);
+        },
+
+        filterContact(actualContact) {
+            if (actualContact.name.includes(this.newFilteredContact)) {
+                return true;
+            }else {
+                return false;
+            };
         },
     },
 });
