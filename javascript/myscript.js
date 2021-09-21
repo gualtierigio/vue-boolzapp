@@ -89,12 +89,26 @@ var app = new Vue({
         ],
 
         selectedContact : 0,
+
+        newMessages : [
+            {
+                date: '21/10/2021',
+                newTextMessage: '',
+                status: 'sent'
+            },
+        ],
     },
 
     methods: {
 
         selectContact(index) {
             this.selectedContact = index;
+        },
+
+        addNewMessage() {
+            if (this.newTextMessage.length > 0){
+                this.newMessages.push(this.newTextMessage)
+            };
         },
     },
 });
