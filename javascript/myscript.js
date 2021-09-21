@@ -131,7 +131,7 @@ var app = new Vue({
                 status: 'received'
             };
 
-            this.contacts[this.selectedContact].messages.search(newMessage);
+            this.contacts[this.selectedContact].messages.push(newMessage);
 
             }, 1000);
         },
