@@ -90,13 +90,14 @@ var app = new Vue({
 
         selectedContact : 0,
 
-        newMessages : [
+        newMessageField: '',
+
+        newMessage : 
             {
                 date: '21/10/2021',
-                newTextMessage: '',
+                text: '',
                 status: 'sent'
             },
-        ],
     },
 
     methods: {
@@ -106,9 +107,14 @@ var app = new Vue({
         },
 
         addNewMessage() {
-            if (this.newTextMessage.length > 0){
-                this.newMessages.push(this.newTextMessage)
+
+            this.newMessage.text = this.newMessageField;
+
+            if (this.newMessage.text.length > 0){
+                this.contacts[this.selectedContact].messages.push(this.newMessage);
             };
+
+            this.newMessageField = '';
         },
     },
 });
