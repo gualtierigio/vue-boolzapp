@@ -96,19 +96,7 @@ var app = new Vue({
         selectContact(index) {
             this.selectedContact = index;
         },
-
-        receivedOrSent(){
-            if (this.selectedContact.messages.status == 'received'){
-                /*stampa come ricevuto*/
-            }else if(this.selectedContact.messages.status == 'sent'){
-                /*stampa come ricevuto*/
-            }
-        },
     },
-
-    mounted(){
-        console.log(this.contacts.messages);
-    }
 });
    
 
