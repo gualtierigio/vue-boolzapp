@@ -137,7 +137,7 @@ var app = new Vue({
         },
 
         filterContact(actualContact) {
-            if (actualContact.name.includes(this.newFilteredContact)) {
+            if (actualContact.name.toLowerCase().includes(this.newFilteredContact)) {
                 return true;
             }else {
                 return false;
